@@ -1,0 +1,24 @@
+/*  layout  */
+html, body{
+    height:100%;
+}
+#main-area{
+    margin-bottom:-50px;
+    min-height: 100%;
+    padding-bottom:50px;    
+}
+/*  tags    */
+a.navbar-brand{
+    font-size:16px;
+}
+body{
+    font-size:16px;
+}
+footer{
+    background-color: rgb(245,245,245);
+}
+header{
+    background-color:#ddd;
+}
+main{
+}

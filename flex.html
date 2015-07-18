@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="static/css/flexbox.css"/>
+	<script src="static/bower_components/jquery/dist/jquery.min.js"></script>
+<script>
+	function keepFooterHeight(){
+		$('.flex-placeholder').height($('#footer ul').outerHeight());
+	}
+	$(function(){
+		keepFooterHeight();
+		$(window).on('resize', keepFooterHeight);
+	});
+
+</script>
+</head>
+<body>
+<div class="flex-container">
+	<div class="flex-item">
+		<nav>
+			<ul>
+				<li><a href="#">Menu1</a></li>
+				<li><a href="#">Menu2</a></li>
+				<li><a href="#">Menu3</a></li>
+				<li><a href="#">Menu4</a></li>
+				<li><a href="#">Menu5</a></li>
+				<li><a href="#">Menu6</a></li>
+				<li><a href="#">Menu7</a></li>
+			</ul>
+		</nav>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+
+		<p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+	</div>
+	<!--<div class="flex-item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</div>-->
+	<footer class="flex-item">
+		<section class="flex-placeholder">
+			<!--<section class="wrapper">
+				<span>Menu1</span>
+				<span>Menu2</span>
+				<span>Menu3</span>
+				<span>Menu4</span>
+				<span>Menu5</span>
+				<span>Menu6</span>
+				<span>Menu7</span>
+				<span>Menu8</span>
+				<span>Menu9</span>
+				<span>Menu10</span>
+			</section>-->
+		</section>
+		<div id="footer">
+			<ul>
+				<li><a href="#">Menu1</a></li>
+				<li><a href="#">Menu2</a></li>
+				<li><a href="#">Menu3</a></li>
+				<li><a href="#">Menu4</a></li>
+				<li><a href="#">Menu5</a></li>
+				<li><a href="#">Menu6</a></li>
+				<li><a href="#">Menu7</a></li>
+				<li><a href="#">Menu8</a></li>
+				<li><a href="#">Menu9</a></li>
+				<li><a href="#">Menu10</a></li>
+			</ul>
+		</div>
+	</footer>
+</div>
+<script></script>
+</body>
+</html>

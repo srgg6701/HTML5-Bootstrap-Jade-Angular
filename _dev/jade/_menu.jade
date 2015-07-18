@@ -1,0 +1,4 @@
+ul.nav.navbar-nav
+	each text, link in { "index":"Главная", "flex":"Flex", "cross-origin":"Обмен сообщениями" }
+		li
+			a(href=link+".html")=text

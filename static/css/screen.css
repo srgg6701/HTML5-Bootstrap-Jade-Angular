@@ -15,10 +15,26 @@ body{
     font-size:16px;
 }
 footer{
-    background-color: rgb(245,245,245);
+    background-color: rgb(230,230,230);
 }
 header{
     background-color:#ddd;
 }
-main{
+header nav{
+    overflow:hidden;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: white;
+}
+/* media queries */
+@media (min-width: 768px){
+    .container>.navbar-collapse{
+        margin:auto -15px;
+    }       
+}
+@media (max-width: 767px){
+    ul.navbar-nav{
+        margin-bottom:auto;
+        margin-top:auto;
+    }
 }

@@ -6,29 +6,13 @@ html(lang="en")
 		title #{title}
 		meta(name='description', content='#{description}')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0' )
-		-var rel="stylesheet"
-		-var static="static/"
-		-var css=static+"css/"
-		-var js=static+"js-libs/"
+		-var rel="stylesheet", static_dir="static/", css=static_dir+"css/", js=static_dir+"js/", js_lib=static_dir+"js-libs/"
 		link(rel=rel,href=css+"bootstrap.min.css")
 		link(rel=rel,href=css+"bootstrap-theme.min.css")
 		link(rel=rel,href=css+"screen.css")
-		script(src=static+"bower_components/jquery/dist/jquery.min.js-libs")
-		script(src=js+"bootstrap.min.js-libs")
+		script(src=static_dir+"bower_components/jquery/dist/jquery.min.js")
+		script(src=js_lib+"bootstrap.min.js")
 	body
-		#main-area
-			header
-				.container
-					.row
-						//.navbar-header
-							a.navbar-brand(href="index.html") Главная
-							//button#sandwich.navbar-toggle.collapsed(type="button",data-toggle="collapse",data-target="#top-navbar")
-						nav(role="navigation")
-							include _menu
-			main.container
-				block main
-		footer
-			.container
-				nav.row
-					include _menu
+		include _layoutStickyFooter
+		script(src=js+"common.js")
 

@@ -1,0 +1,35 @@
+extends _layout
+block vars
+	- var title='7. Обмен сообщениями между документами'
+	- var description = 'HTML5'
+block main
+	.row
+		.col-lg-12
+			h2=title
+			h3="Средства реализации"
+			-var postMessage="Функция postMessage()", onMessage="Событие onMessage", eventData="Атрибут event.data", eventOrigin="Атрибут event.origin", eventSource="Атрибут event.source"
+			div
+				ul.pull-left.col-lg-6.col-md-6.col-sm-12.col-xs-12
+					li=postMessage
+					li=onMessage
+					li=eventData
+					li=eventOrigin
+					li=eventSource
+				.pull-left.col-lg-6.col-md-6.col-sm-12.col-xs-12
+					.row
+						iframe#messages-box.display-block(src="messages.html", height=300)
+						textarea#messages-area.display-block
+						button.display-table(type="button", onclick="send()")="Send message"
+			//hr.clear
+			h4=postMessage
+			p
+				code="window.postMessage(message,targetOrigin)"
+			h4=onMessage
+			p="Возникает при получении сообщения."
+			h4=eventData
+			p="Данные сообщения."
+			h4=eventOrigin
+			p="Место назначения сообщения."
+			h4=eventSource
+			p="Содержит Window.proxy исходного окна."
+	script(src="static/js/messages.js")

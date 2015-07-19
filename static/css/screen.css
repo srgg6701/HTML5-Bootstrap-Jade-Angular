@@ -23,8 +23,34 @@ header{
 header nav{
     overflow:hidden;
 }
+.clear{
+    clear: both;
+}
+.display-block{
+	display: block;
+	width: 100%;
+}
+.display-table{
+	display: table;
+}
+.flex{
+	display: flex;
+}
+.max-with-100{
+	max-width: 100%;
+}
 .nav>li>a:focus, .nav>li>a:hover {
     background-color: white;
+}
+.width-100{
+	width: 100%;
+}
+/* id id */
+#messages-area{
+	margin: 4px auto;
+}
+#messages-area, #messages-box{
+	max-width: 600px;
 }
 /* media queries */
 @media (min-width: 768px){

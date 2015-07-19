@@ -9,9 +9,6 @@ html, body{
     padding: 0;
 }
 /* теги */
-div:not(#page){
-    padding: 1em;
-}
 footer{
     background-color: #bbffaa;
     position:relative;
@@ -19,6 +16,9 @@ footer{
     width: 100%;
 }
 /* id id */
+#content-box{
+    padding: 1em;
+}
 #flex-placeholder{
     visibility:hidden;
     padding-top: 0;
@@ -56,7 +56,7 @@ footer ul{
     margin: 0;
 }
 /* многоуровневые */
-footer ul li{
+nav ul li, footer ul li{
     display: table-cell;
     float: left;
 }

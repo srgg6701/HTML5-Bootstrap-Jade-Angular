@@ -1,3 +1,4 @@
+/* общие элементы */
 *{
     box-sizing: border-box;
 }
@@ -7,34 +8,20 @@ html, body{
     margin: 0;
     padding: 0;
 }
-div:not(.flex-container){
+/* теги */
+div:not(#page){
     padding: 1em;
 }
-.flex-container {
-    background-color: #ddd;
-    display:flex;
-    flex-wrap: wrap;
-    min-height:100%;
-}
-.flex-item{
-    align-self: auto;
-}
-.flex-item:nth-child(1) {
-    background-color: #aabbff;
-}
-.flex-item:nth-child(2) {
-    background-color: #bbffaa;
-}
-.flex-placeholder{
-    visibility:hidden;
-    padding-top: 0;
-    /* display: none; */
-}
 footer{
+    background-color: #bbffaa;
     position:relative;
     padding:0;
     width: 100%;
-    /* max-height: 40px; */
+}
+/* id id */
+#flex-placeholder{
+    visibility:hidden;
+    padding-top: 0;
 }
 #footer{
     background-color:orange;
@@ -45,32 +32,40 @@ footer{
     right: 8px;
     padding: 0;
 }
-
+#page{
+    background-color: #ddd;
+    display:flex;
+    flex-wrap: wrap;
+    min-height:100%;
+}
 /* составные селекторы */
-
-footer ul{
-    background-color: floralwhite;
-    position:absolute;
-    bottom:0;
+/* одноуровневые */
+#content-box,
+footer{
+    align-self: auto;
 }
-footer ul,
-.flex-placeholder .wrapper{
-    margin: 0;
-}
+/* двухуровневые */
 nav ul, footer ul{
     display:table;
     padding: 0;
 }
-nav ul li, footer ul li, .flex-placeholder span{
+footer ul{
+    background-color: floralwhite;
+    position:absolute;
+    bottom:0;
+    margin: 0;
+}
+/* многоуровневые */
+footer ul li{
     display: table-cell;
     float: left;
 }
-
-nav ul li a, footer ul li a,
-.flex-placeholder span{
+nav ul li, nav ul li a, footer ul li a{
     display: table-cell;
     padding:4px 8px;
 }
-.wrapper{
-    overflow:auto;
+
+/* test */
+#content-box {
+    background-color: #aabbff;
 }

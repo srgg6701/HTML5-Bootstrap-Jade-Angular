@@ -7,7 +7,7 @@
 	<script src="static/bower_components/jquery/dist/jquery.min.js"></script>
 <script>
 	function keepFooterHeight(){
-		$('.flex-placeholder').height($('#footer ul').outerHeight());
+		$('#flex-placeholder').height($('footer ul').outerHeight());
 	}
 	$(function(){
 		keepFooterHeight();
@@ -18,7 +18,7 @@
 </head>
 <body>
 <div class="flex-container">
-	<div class="flex-item">
+	<div id="content-box">
 		<nav>
 			<ul>
 				<li><a href="#">Menu1</a></li>
@@ -40,21 +40,11 @@
 
 		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
 	</div>
-	<!--<div class="flex-item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</div>-->
-	<footer class="flex-item">
-		<section class="flex-placeholder">
-			<!--<section class="wrapper">
-				<span>Menu1</span>
-				<span>Menu2</span>
-				<span>Menu3</span>
-				<span>Menu4</span>
-				<span>Menu5</span>
-				<span>Menu6</span>
-				<span>Menu7</span>
-				<span>Menu8</span>
-				<span>Menu9</span>
-				<span>Menu10</span>
-			</section>-->
+	<!--<div class="flex-item">
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+	</div>-->
+	<footer>
+		<section id="flex-placeholder">
 		</section>
 		<div id="footer">
 			<ul>

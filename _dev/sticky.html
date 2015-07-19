@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="../static/bower_components/jquery/dist/jquery.min.js"></script>
+	<script>
+		$(function(){
+			var syncFooter = function() {
+				$('#page').css('margin-bottom', '-' + $('footer').outerHeight() + 'px');
+			};
+			syncFooter();
+			$(window).on('resize', syncFooter);
+		});
+	</script>
+	<style>
+		/* Mostly: http://ryanfait.com/sticky-footer/ */
+		* {
+			margin: 0;
+		}
+		html, body {
+			height: 100%;
+		}
+		#page {
+			min-height: 100%;
+			/* equal to footer height */
+			margin-bottom: -80px;
+		}
+		#page:after {
+			content: "";
+			display: block;
+		}
+		#page:after {
+			/* .push must be the same height as footer */
+			height: 80px;
+		}
+		footer {
+			background: orange;
+			min-height: 80px;
+			overflow: auto;
+		}
+	</style>
+</head>
+<body>
+<div id="page">
+
+	<h1>Sticky Footer</h1>
+	<h2>with Fixed Footer Height</h2>
+
+	<button id="add">Add Content</button>
+
+</div>
+<footer>
+	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+</footer>
+</body>
+</html>

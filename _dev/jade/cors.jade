@@ -1,17 +1,33 @@
 extends _layout
 block vars
-	- var title='Title', description = 'Description'
+	- var title='XMLHttpRequest Level2', description = 'Description'
 block xtra_scripts
 	//script(src=bower_dir + "angular/angular.min.js")
-	//script(src=scripts_dir+"app.js")
+	script(src=js_dir+"cors/default.js")
 	//script(src=controllers_dir+"namedController.js")
 block main
 	.row
 		.col-lg-12
 			h2=title
-				//input.pull-right(type="search", ng-model="query", placeholder="термин для поиска")
-			//div.clear(ng-repeat="info in data | filter:query | orderBy:info[0]")
-				dfn
-					|{{ info[0] }}
-				p
-					|{{ info[1] }}
+			hr
+			#progress
+			#content="Content comes here..."
+			hr
+			button(type="button", onclick="getContent()")="Load"
+			hr
+			h4="Resources"
+			p
+				|Enable CORS:
+				a(href="http://enable-cors.org/server.html")=" http://enable-cors.org/server.html"
+			p
+				|XMLHttpRequest Level 1:
+				a(href="http://xmlhttprequest.ru/")=" xmlhttprequest.ru"
+			p
+				|XMLHttpRequest Level 2:
+				a(href="http://www.html5rocks.com/ru/tutorials/file/xhr2/")=" новые приемы"
+			p
+				|Обзор различных API файловой системы:
+				a(href="http://www.html5rocks.com/ru/tutorials/file/filesystem/")=" html5rocks.com/ru/tutorials/file/filesystem/"
+			p
+				|Чтение файлов в JavaScript с помощью API файлов:
+				a(href="http://www.html5rocks.com/ru/tutorials/file/dndfiles/")=" html5rocks.com/ru/tutorials/file/dndfiles/"

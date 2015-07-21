@@ -7,7 +7,8 @@ html(lang="en")
 		meta(charset='UTF-8')
 		meta(name='description', content='#{description}')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0' )
-		-var rel="stylesheet", scripts_dir="scripts/", controllers_dir=scripts_dir+"controllers/", static_dir="static/", bower_dir=static_dir + "bower_components/", css=static_dir+"css/", js=static_dir+"js/", js_lib=static_dir+"js-libs/"
+		// vars
+		-var rel="stylesheet", scripts_dir="scripts/", controllers_dir=scripts_dir+"controllers/", static_dir="static/", bower_dir=static_dir + "bower_components/", css=static_dir+"css/", js_dir=static_dir+"js/", js_lib=static_dir+"js-libs/"
 		link(rel=rel,href=css+"bootstrap.min.css")
 		link(rel=rel,href=css+"bootstrap-theme.min.css")
 		link(rel=rel,href=css+"screen.css")
@@ -16,5 +17,5 @@ html(lang="en")
 		block xtra_scripts
 	body
 		include _layoutStickyFooter
-		script(src=js+"common.js")
+		script(src=js_dir+"common.js")
 

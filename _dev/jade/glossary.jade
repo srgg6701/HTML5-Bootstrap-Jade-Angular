@@ -11,7 +11,7 @@ block main
 		.col-lg-12(ng-controller="Glossary")
 			h2=title
 				input.pull-right(type="search", ng-model="query", placeholder="термин для поиска")
-			div.clear(ng-repeat="info in data | filter:query")
+			div.clear(ng-repeat="info in data | filter:query | orderBy:info[0]")
 				dfn
 					|{{ info[0] }}
 				p

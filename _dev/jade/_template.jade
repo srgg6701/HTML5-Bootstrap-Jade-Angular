@@ -1,0 +1,17 @@
+extends _layout
+block vars
+	- var title='Title', description = 'Description'
+block xtra_scripts
+	//script(src=bower_dir + "angular/angular.min.js")
+	//script(src=scripts_dir+"app.js")
+	//script(src=controllers_dir+"namedController.js")
+block main
+	.row(ng-app="App")
+		.col-lg-12(ng-controller="NameOfController")
+			h2=title
+				input.pull-right(type="search", ng-model="query", placeholder="термин для поиска")
+			div.clear(ng-repeat="info in data | filter:query | orderBy:info[0]")
+				dfn
+					|{{ info[0] }}
+				p
+					|{{ info[1] }}

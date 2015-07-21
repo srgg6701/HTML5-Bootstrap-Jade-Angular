@@ -60,6 +60,20 @@ header nav{
 .nav>li>a:focus, .nav>li>a:hover {
     background-color: white;
 }
+[ng-controller="Glossary"] [type="search"]{
+	font-size: 0.5em;
+	margin: 1.5rem auto;
+	width: 100%;
+}
+
+@media (min-width: 728px){
+	[ng-controller="Glossary"] [type="search"]{
+		margin-left: 40px;
+		margin-top: 4px;
+		max-width: 100%;
+		width: 340px;
+	}
+}
 .width-100{
 	width: 100%;
 }

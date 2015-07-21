@@ -10,7 +10,8 @@ block main
 	.row(ng-app="App")
 		.col-lg-12(ng-controller="Glossary")
 			h2=title
-			div(ng-repeat="info in data | filter:query")
+				input.pull-right(type="search", ng-model="query", placeholder="термин для поиска")
+			div.clear(ng-repeat="info in data | filter:query")
 				dfn
 					|{{ info[0] }}
 				p

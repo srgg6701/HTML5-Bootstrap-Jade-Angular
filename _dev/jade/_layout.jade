@@ -4,14 +4,16 @@ html(lang="en")
 	// set title and description
 	head
 		title #{title}
+		meta(charset='UTF-8')
 		meta(name='description', content='#{description}')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0' )
-		-var rel="stylesheet", static_dir="static/", css=static_dir+"css/", js=static_dir+"js/", js_lib=static_dir+"js-libs/"
+		-var rel="stylesheet", scripts_dir="scripts/", controllers_dir=scripts_dir+"controllers/", static_dir="static/", bower_dir=static_dir + "bower_components/", css=static_dir+"css/", js=static_dir+"js/", js_lib=static_dir+"js-libs/"
 		link(rel=rel,href=css+"bootstrap.min.css")
 		link(rel=rel,href=css+"bootstrap-theme.min.css")
 		link(rel=rel,href=css+"screen.css")
 		script(src=static_dir+"bower_components/jquery/dist/jquery.min.js")
 		script(src=js_lib+"bootstrap.min.js")
+		block xtra_scripts
 	body
 		include _layoutStickyFooter
 		script(src=js+"common.js")

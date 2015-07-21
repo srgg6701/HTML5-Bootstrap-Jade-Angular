@@ -1,0 +1,17 @@
+extends _layout
+block vars
+	- var title='Глоссарий терминов'
+	- var description = 'HTML5 глоссарий терминов'
+block xtra_scripts
+	script(src=bower_dir + "angular/angular.min.js")
+	script(src=scripts_dir+"app.js")
+	script(src=controllers_dir+"glossaryController.js")
+block main
+	.row(ng-app="App")
+		.col-lg-12(ng-controller="Glossary")
+			h2=title
+			div(ng-repeat="info in data | filter:query")
+				dfn
+					|{{ info[0] }}
+				p
+					|{{ info[1] }}

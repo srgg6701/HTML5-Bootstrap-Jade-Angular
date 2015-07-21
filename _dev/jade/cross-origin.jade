@@ -15,12 +15,18 @@ block main
 					li=eventData
 					li=eventOrigin
 					li=eventSource
-				.pull-left.col-lg-6.col-md-6.col-sm-12.col-xs-12
+				#messages-container.pull-left.col-lg-6.col-md-6.col-sm-12.col-xs-12
 					.row
-						iframe#messages-box.display-block(src="messages.html", height=300)
-						textarea#messages-area.display-block
-						button.display-table(type="button", onclick="send()")="Send message"
-			//hr.clear
+						section#direction-inside
+							iframe.messges-box#messages-box-inside.display-block(src="messages.html", height=300)
+							textarea.messages-area#messages-area-inside.display-block
+							span.glyphicon.glyphicon-home
+							button.display-table(type="button", onclick="send('inside')")="Send inside"
+						section#direction-outside.hidden
+							iframe.messges-box#messages-box-outside.display-block(src="http://temp:89/messages.php", height=300)
+							textarea.messages-area#messages-area-outside.display-block
+							span.glyphicon.glyphicon-cloud-upload
+							button.display-table(type="button", onclick="send('outside')")="Send outside"
 			h4=postMessage
 			p
 				code="window.postMessage(message,targetOrigin)"
@@ -32,4 +38,4 @@ block main
 			p="Место назначения сообщения."
 			h4=eventSource
 			p="Содержит Window.proxy исходного окна."
-	script(src="static/js/messages.js")
+	script(src="static/js/messages/send.js")

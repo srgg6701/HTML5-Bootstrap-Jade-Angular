@@ -68,6 +68,30 @@ header nav{
 	margin: 1.5rem auto;
 	width: 100%;
 }
+#progress{
+	/* height: 40px; */
+	border: solid 1px #bbb;
+	margin-bottom: 20px;
+}
+#progress >div{
+	height: 30px;
+	width: 0%;
+	background-image: 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	-webkit-linear-gradient(rgba(0,0,255,0.2), rgba(0,0,255,0.7));
+}
 
 @media (min-width: 728px){
 	[ng-controller="Glossary"] [type="search"]{

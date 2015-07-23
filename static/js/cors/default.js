@@ -3,11 +3,18 @@
 };*/
 
 function getContent() {
-	var container = document.getElementById('content'),
+	var files = {
+				pdf_en:"space_odyssey_2010.pdf",
+				txt_ru:"space_odyssey_3001.txt",
+				jpg:"cazbecus.jpg"
+			},
+			container = document.getElementById('content'),
 			progress = document.getElementById('progress'),
+			progressRatio =document.getElementById('ratio'),
 			xhr = new XMLHttpRequest(),
-			url = 'https://raw.githubusercontent.com/srgg6701/HTML5-Bootstrap-Jade-Angular/master/static/contents/cazbecus.jpg';////space_odyssey_3001.txt
+			url = 'https://raw.githubusercontent.com/srgg6701/HTML5-Bootstrap-Jade-Angular/master/static/contents/' + files.pdf_en;
 	progress.style.visibility="visible";
+	progressRatio.style.width='0';
 	container.textContent='';
 	container.innerText="loading...";
 	/**/
@@ -19,7 +26,7 @@ function getContent() {
 	xhr.onprogress = function(e) {
 		console.dir([xhr,e]); //console.log('leaded: '+e.loaded+', total: '+ e.total);
 		var ratio = (e.loaded / 3969837 * 100).toFixed();/*e.total;*/
-		document.getElementById('ratio').style.width=ratio + '%';
+		progressRatio.style.width=ratio + '%';
 			//.innerHTML=ratio + "% downloaded";
 	};
 	xhr.send(null);

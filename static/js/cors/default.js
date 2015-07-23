@@ -5,6 +5,7 @@
 function getContent() {
 	var files = {
 				pdf_en:"space_odyssey_2010.pdf",
+				html_en:"text.html",
 				txt_en:"2001OdysseyOne.txt",
 				txt_ru:"space_odyssey_3001.txt",
 				jpg:"cazbecus.jpg"
@@ -13,7 +14,7 @@ function getContent() {
 			progress = document.getElementById('progress'),
 			progressRatio =document.getElementById('ratio'),
 			xhr = new XMLHttpRequest(),
-			url = 'https://raw.githubusercontent.com/srgg6701/HTML5-Bootstrap-Jade-Angular/master/static/contents/' + files.pdf_en;
+			url = 'https://raw.githubusercontent.com/srgg6701/HTML5-Bootstrap-Jade-Angular/master/static/contents/' + files.html_en;
 	progress.style.visibility="visible";
 	progressRatio.style.width='0';
 	container.textContent='';
@@ -22,7 +23,7 @@ function getContent() {
 	/**/
 	xhr.open("GET", url, true);
 	xhr.onload=function () {
-		container.textContent=xhr.responseText;
+		container.innerHTML=xhr.responseText;
 		progress.style.visibility="hidden";
 	};
 	xhr.onprogress = function(e) {

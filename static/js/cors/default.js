@@ -6,18 +6,21 @@ function getContent() {
 	var container = document.getElementById('content'),
 			progress = document.getElementById('progress'),
 			xhr = new XMLHttpRequest(),
-			url = 'https://raw.githubusercontent.com/srgg6701/HTML5-Bootstrap-Jade-Angular/master/static/contents/space_odyssey_3001.txt';
+			url = 'https://raw.githubusercontent.com/srgg6701/HTML5-Bootstrap-Jade-Angular/master/static/contents/space_odyssey_3001.txt';//cazbecus.jpg
+	progress.style.visibility="visible";
+	container.textContent='';
 	container.innerText="loading...";
 	/**/
 	xhr.open("GET", url, true);
 	xhr.onload=function () {
 		container.textContent=xhr.responseText;
-		progress.innerHTML='';
+		progress.style.visibility="hidden";
 	};
 	xhr.onprogress = function(e) {
-		//console.dir(e); //console.log('leaded: '+e.loaded+', total: '+ e.total);
-		var ratio = (e.loaded / e.total).toFixed();/*661642 * 100;*/
-		progress.innerHTML=ratio + "% downloaded";
+		console.dir([xhr,e]); //console.log('leaded: '+e.loaded+', total: '+ e.total);
+		var ratio = (e.loaded / 3969837 * 100).toFixed();/*e.total;*/
+		document.getElementById('ratio').style.width=ratio + '%';
+			//.innerHTML=ratio + "% downloaded";
 	};
 	xhr.send(null);
 }

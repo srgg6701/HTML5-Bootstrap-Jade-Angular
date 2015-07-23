@@ -5,6 +5,7 @@
 function getContent() {
 	var files = {
 				pdf_en:"space_odyssey_2010.pdf",
+				txt_en:"2001OdysseyOne.txt",
 				txt_ru:"space_odyssey_3001.txt",
 				jpg:"cazbecus.jpg"
 			},
@@ -16,6 +17,7 @@ function getContent() {
 	progress.style.visibility="visible";
 	progressRatio.style.width='0';
 	container.textContent='';
+	container.innerHTML='';
 	container.innerText="loading...";
 	/**/
 	xhr.open("GET", url, true);

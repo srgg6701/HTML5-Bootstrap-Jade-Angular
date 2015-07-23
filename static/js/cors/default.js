@@ -6,7 +6,7 @@ function getContent() {
 	var container = document.getElementById('content'),
 			progress = document.getElementById('progress'),
 			xhr = new XMLHttpRequest(),
-			url = 'https://raw.githubusercontent.com/srgg6701/HTML5-Bootstrap-Jade-Angular/master/static/contents/space_odyssey_3001.txt';//cazbecus.jpg
+			url = 'https://raw.githubusercontent.com/srgg6701/HTML5-Bootstrap-Jade-Angular/master/static/contents/cazbecus.jpg';////space_odyssey_3001.txt
 	progress.style.visibility="visible";
 	container.textContent='';
 	container.innerText="loading...";

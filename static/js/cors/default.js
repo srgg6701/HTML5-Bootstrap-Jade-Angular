@@ -1,8 +1,5 @@
-/*window.onload=function(){
-	console.log('Hello! Default here.');
-};*/
-
-function getContent() {
+// http://plnkr.co/edit/i3PWKbQrLohN7RCB1TZ9?p=preview
+function getContent(file_type) {
 	var files = {
 				pdf_en:"space_odyssey_2010.pdf",
 				html_en:"text.html",
@@ -14,7 +11,7 @@ function getContent() {
 			progress = document.getElementById('progress'),
 			progressRatio =document.getElementById('ratio'),
 			xhr = new XMLHttpRequest(),
-			url = 'https://raw.githubusercontent.com/srgg6701/HTML5-Bootstrap-Jade-Angular/master/static/contents/' + files.html_en;
+			url = 'https://raw.githubusercontent.com/srgg6701/HTML5-Bootstrap-Jade-Angular/master/static/contents/' + files[file_type];
 	progress.style.visibility="visible";
 	progressRatio.style.width='0';
 	container.textContent='';
@@ -28,7 +25,8 @@ function getContent() {
 	};
 	xhr.onprogress = function(e) {
 		console.dir([xhr,e]); //console.log('leaded: '+e.loaded+', total: '+ e.total);
-		var ratio = (e.loaded / 3969837 * 100).toFixed();/*e.total;*/
+		var ratio = (e.loaded / e.total/*3969837*/ * 100).toFixed();/*;*/
+		console.dir([e.loaded, e.total, (e.loaded / e.total * 100)]);
 		progressRatio.style.width=ratio + '%';
 			//.innerHTML=ratio + "% downloaded";
 	};

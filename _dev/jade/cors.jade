@@ -2,33 +2,36 @@ extends _layout
 block vars
 	- var title='XMLHttpRequest Level2', description = 'Description'
 block xtra_scripts
-	//script(src=bower_dir + "angular/angular.min.js")
 	script(src=js_dir+"cors/default.js")
-	//script(src=controllers_dir+"namedController.js")
 block main
-	.row
-		.col-lg-12
-			h2=title
-			hr
-			#progress
-				#ratio
-			#content="Content comes here..."
-			hr
-			button(type="button", onclick="getContent()")="Load"
-			hr
-			h4="Resources"
-			p
-				|Enable CORS:
-				a(href="http://enable-cors.org/server.html")=" http://enable-cors.org/server.html"
-			p
-				|XMLHttpRequest Level 1:
-				a(href="http://xmlhttprequest.ru/")=" xmlhttprequest.ru"
-			p
-				|XMLHttpRequest Level 2:
-				a(href="http://www.html5rocks.com/ru/tutorials/file/xhr2/")=" новые приемы"
-			p
-				|Обзор различных API файловой системы:
-				a(href="http://www.html5rocks.com/ru/tutorials/file/filesystem/")=" html5rocks.com/ru/tutorials/file/filesystem/"
-			p
-				|Чтение файлов в JavaScript с помощью API файлов:
-				a(href="http://www.html5rocks.com/ru/tutorials/file/dndfiles/")=" html5rocks.com/ru/tutorials/file/dndfiles/"
+	#page.page-cors
+		.row
+			.col-lg-12
+				h2=title
+				hr
+				#progress
+					#ratio
+				#content="Content comes here..."
+				hr
+				button(type="button", onclick="getContent('pdf_en')")="Load pdf_en"
+				button(type="button", onclick="getContent('html_en')")="Load html_en"
+				button(type="button", onclick="getContent('txt_en')")="Load txt_en"
+				button(type="button", onclick="getContent('txt_ru')")="Load txt_ru"
+				button(type="button", onclick="getContent('jpg')")="Load jpg"
+				hr
+				h4="Resources"
+				p
+					|Enable CORS:
+					a(href="http://enable-cors.org/server.html")=" http://enable-cors.org/server.html"
+				p
+					|XMLHttpRequest Level 1:
+					a(href="http://xmlhttprequest.ru/")=" xmlhttprequest.ru"
+				p
+					|XMLHttpRequest Level 2:
+					a(href="http://www.html5rocks.com/ru/tutorials/file/xhr2/")=" новые приемы"
+				p
+					|Обзор различных API файловой системы:
+					a(href="http://www.html5rocks.com/ru/tutorials/file/filesystem/")=" html5rocks.com/ru/tutorials/file/filesystem/"
+				p
+					|Чтение файлов в JavaScript с помощью API файлов:
+					a(href="http://www.html5rocks.com/ru/tutorials/file/dndfiles/")=" html5rocks.com/ru/tutorials/file/dndfiles/"
